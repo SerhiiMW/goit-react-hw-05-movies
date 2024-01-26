@@ -1,0 +1,9 @@
+.imgMovie {
+    width: 100px;
+    height: 100px;
+}
+.castReviewsList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
