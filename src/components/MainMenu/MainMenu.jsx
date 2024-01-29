@@ -4,7 +4,7 @@ import styles from "./main-menu.module.css";
 
 const MainMenu = () => {
     return (
-        <ul className={styles.menu}>
+        <ul className={styles.mainMenu}>
             <li>
                 <NavLink className={styles.link} to="/">Home</NavLink>
             </li>

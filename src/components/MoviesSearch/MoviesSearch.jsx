@@ -50,7 +50,7 @@ const SearchMovies = () => {
     return (
         <>
             <MoviesSearchForm onSubmit={handleSearch} />
-            {error && <p className={styles.error}>{error}</p>}
+            {error && <p className={styles.errorColor}>{error}</p>}
             {loading && <p>...Loading</p>}
             {isMovies && <MoviesSearchList items={movies} />}
         </>

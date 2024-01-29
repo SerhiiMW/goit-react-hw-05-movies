@@ -37,7 +37,7 @@ const MoviesSearchForm = ({ onSubmit }) => {
     const searchId = useMemo(() => nanoid(), []);
 
     return (
-        <form onSubmit={handleSubmit} className={styles.form}>
+        <form onSubmit={handleSubmit} className={styles.searchForm}>
             <div className={styles.fieldGroup}>
                 <label htmlFor={searchId}></label>
                 <input id={searchId} ref={inputRef} value={state.search} onChange={handleChange} required type="text" name="search" />
