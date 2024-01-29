@@ -1,9 +1,6 @@
-import styles from './movie-details.module.css'
-
-// import { Link, Outlet } from "react-router-dom";
+// import styles from './movie-details.module.css'
 
 import SingleMovieDetails from "../../components/SingleMovie/SingleMovieDetails";
-
 
 const MovieDetails = ()=>{
     return (

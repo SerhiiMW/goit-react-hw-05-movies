@@ -11,15 +11,12 @@ const Cast = ()=> {
     const [error, setError] = useState(null);
 
     const {id} = useParams();
-
-    // const id = '504949'
     useEffect(()=> {
         const fetchCast = async()=> {
             try {
                 setLoading(true);
                 const {data} = await getMoviesByIdCast(id);
                 setCast(data.cast);
-                // console.log(data)
             }
             catch(error) {
                 setError(error.message);
@@ -30,12 +27,12 @@ const Cast = ()=> {
         }
 
         fetchCast();
-    }, []);
+    }, [id]);
 
     const elements = cast.map(({id, name, character, profile_path}) => <li key={id}>
-                                                                        <img className={styles.imgCast} src={profile_path} alt="" />
+                                                                        <img className={styles.imgCast} src={`https://image.tmdb.org/t/p/w300${profile_path}`} alt={name} />
                                                                         <h4>{name}</h4>
-                                                                        <p>{character}</p>                                                       
+                                                                        <p>Character: {character}</p>                                                       
                                                                         </li>)
 
     const isCast = Boolean(cast.length);
@@ -44,7 +41,7 @@ const Cast = ()=> {
         <>
         {loading && <p>...Loading</p>}
         {error && <p>{error}</p>}
-        {isCast && <ol>{elements}</ol>}
+        {isCast && <ul className={styles.castList}>{elements}</ul>}
         </>
         
     )

@@ -6,7 +6,7 @@ const MoviesSearchList = ({items}) => {
     const location = useLocation();
 
     const elements = items.map(({ id, original_title}) => (<li key={id} className={styles.item}>
-                                                                <Link to={`movies/${id}`} state={{from: location}}>{original_title}</Link>
+                                                                <Link to={`/movies/${id}`} state={{from: location}}>{original_title}</Link>
                                                             </li>));
 
     return (

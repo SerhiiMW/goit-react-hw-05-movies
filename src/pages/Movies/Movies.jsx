@@ -1,6 +1,6 @@
 import MoviesSearch from "../../components/MoviesSearch/MoviesSearch";
 
-import styles from "./movies-search-page.module.css";
+// import styles from "./movies-search-page.module.css";
 
 const Movies = ()=> {
     return (

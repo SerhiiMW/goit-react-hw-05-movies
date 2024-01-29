@@ -1,9 +1,41 @@
+h1, h2, h3 {
+    padding: 0;
+    margin: 0;
+}
+
 .imgMovie {
-    width: 100px;
-    height: 100px;
+    max-width: 500px;
+    max-height: 300px;
 }
 .castReviewsList {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+.genresList {
+    list-style: none;
+}
+.genres {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.movieWrapper {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.textWrapper {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.information {
+    margin-left: 10px;
+}
+.backBtn {
+    margin-left: 10px;
+    cursor: pointer;
 }

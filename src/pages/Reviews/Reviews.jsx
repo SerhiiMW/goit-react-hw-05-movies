@@ -12,14 +12,12 @@ const Reviews = ()=> {
 
     const {id} = useParams();
 
-    // const id = '504949'
     useEffect(()=> {
         const fetchReviews = async()=> {
             try {
                 setLoading(true);
                 const {data} = await getMoviesByIdReviews(id);
                 setReviews(data.results);
-                // console.log(data)
             }
             catch(error) {
                 setError(error.message);
@@ -30,7 +28,7 @@ const Reviews = ()=> {
         }
 
         fetchReviews();
-    }, []);
+    }, [id]);
 
     const elements = reviews.map(({id, author, content}) => <li key={id}>
                                                                         <h4>{author}</h4>
@@ -43,7 +41,7 @@ const Reviews = ()=> {
         <>
         {loading && <p>...Loading</p>}
         {error && <p>{error}</p>}
-        {isCast && <ol>{elements}</ol>}
+        {isCast ? <ul>{elements}</ul> : <p className={styles.msg}>We don't have any reviews for this movie</p>}
         </>
         
     )
